@@ -10,7 +10,7 @@ const lower = document.querySelector('.lower');
 
 async function getWeather(city) {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`);
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`);
         const data = await response.json();
         return processData(data);
     } catch (e) {
