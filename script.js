@@ -32,7 +32,7 @@ function processData(data) {
     }
 }
 (async () => {
-    const place = await getWeather('london');
+    const place = await getWeather('bucharest');
     loadWeather(place);
 })();
 
