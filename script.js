@@ -1,4 +1,5 @@
 const api_key = 'a0dcff29dce840aba5c80555242506';
+const baseURL = 'https://api.weatherapi.com/v1'
 let city = 'london';
 
 const search = document.querySelector('button');
@@ -10,7 +11,7 @@ const lower = document.querySelector('.lower');
 
 async function getWeather(city) {
     try {
-        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${city}`);
+        const response = await fetch(`${baseURL}/forecast.json?key=${api_key}&q=${city}`);
         const data = await response.json();
         return processData(data);
     } catch (e) {
